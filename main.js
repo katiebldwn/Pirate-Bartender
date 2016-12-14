@@ -1,18 +1,18 @@
 $(document).ready(function() {
-	var ingredients = [];
-	var strongIngredients = ['Glug of rum', 'slug of whisky', 'splash of gin'];
-	var weakIngredients = ['Sip of sprite', 'Infusion of sea spray', 'splash of water'];
-	var saltyIngredients = ['Olive on a stick', 'salt-dusted rim', 'rasher of bacon'];
-	var blandIngredients = ['Umbrella on a stick', 'slice of water chestnut', 'rasher of potatoes'];
-	var bitterIngredients = ['Shake of bitters', 'splash of frog juice', 'twist of lemon peel'];
-	var nonBitterIngredients = ['Splash of pineapple juice', 'three ice cubes', 'twist of nothing'];
-	var sweetIngredients = ['Sugar cube', 'spoonful of honey', 'splash of cola'];
-	var nonSweetIngredients = ['Pinch of arsenic', 'spoonful of tonic', 'handful of olives'];
-	var fruityIngredients = ['Slice of orange', 'dash of cassis', 'cherry on top'];
-	var nonFruityIngredients = ['Slice of ginger', 'dash of kelp', 'nachos on the side']
-	var includedItems = [];
+	const ingredients = [];
+	const strongIngredients = ['Glug of rum', 'slug of whisky', 'splash of gin'];
+	const weakIngredients = ['Sip of sprite', 'Infusion of sea spray', 'splash of water'];
+	const saltyIngredients = ['Olive on a stick', 'salt-dusted rim', 'rasher of bacon'];
+	const blandIngredients = ['Umbrella on a stick', 'slice of water chestnut', 'rasher of potatoes'];
+	const bitterIngredients = ['Shake of bitters', 'splash of frog juice', 'twist of lemon peel'];
+	const nonBitterIngredients = ['Splash of pineapple juice', 'three ice cubes', 'twist of nothing'];
+	const sweetIngredients = ['Sugar cube', 'spoonful of honey', 'splash of cola'];
+	const nonSweetIngredients = ['Pinch of arsenic', 'spoonful of tonic', 'handful of olives'];
+	const fruityIngredients = ['Slice of orange', 'dash of cassis', 'cherry on top'];
+	const nonFruityIngredients = ['Slice of ginger', 'dash of kelp', 'nachos on the side']
+	const includedItems = [];
 	$('.strongYes').click(function() {
-		var random = Math.floor(Math.random()*3);
+		let random = Math.floor(Math.random()*3);
 		ingredients.push(strongIngredients[random]);
 		$('.strong').hide();
 		$('.salty').show();
@@ -21,7 +21,7 @@ $(document).ready(function() {
 	})
 
 	$('.strongNo').click(function() {
-		var random = Math.floor(Math.random()*3);
+		let random = Math.floor(Math.random()*3);
 		ingredients.push(weakIngredients[random]);
 		$('.strong').hide();
 		$('.salty').show();
@@ -29,7 +29,7 @@ $(document).ready(function() {
 	})
 
 	$('.saltyYes').click(function() {
-		var random = Math.floor(Math.random()*3);
+		let random = Math.floor(Math.random()*3);
 		ingredients.push(saltyIngredients[random]);
 		$('.salty').hide();
 		$('.bitter').show();
@@ -37,7 +37,7 @@ $(document).ready(function() {
 	})
 
 	$('.saltyNo').click(function() {
-		var random = Math.floor(Math.random()*3);
+		let random = Math.floor(Math.random()*3);
 		ingredients.push(blandIngredients[random]);
 		$('.salty').hide();
 		$('.bitter').show();
@@ -45,7 +45,7 @@ $(document).ready(function() {
 	})
 
 	$('.bitterYes').click(function() {
-		var random = Math.floor(Math.random()*3);
+		let random = Math.floor(Math.random()*3);
 		ingredients.push(bitterIngredients[random]);
 		$('.bitter').hide();
 		$('.sweet').show();
@@ -53,7 +53,7 @@ $(document).ready(function() {
 	})
 
 	$('.bitterNo').click(function() {
-		var random = Math.floor(Math.random()*3);
+		let random = Math.floor(Math.random()*3);
 		ingredients.push(nonBitterIngredients[random]);
 		$('.bitter').hide();
 		$('.sweet').show();
@@ -61,7 +61,7 @@ $(document).ready(function() {
 	})
 
 	$('.sweetYes').click(function() {
-		var random = Math.floor(Math.random()*3);
+		let random = Math.floor(Math.random()*3);
 		ingredients.push(sweetIngredients[random]);
 		$('.sweet').hide();
 		$('.fruity').show();
@@ -69,7 +69,7 @@ $(document).ready(function() {
 	})
 
 	$('.sweetNo').click(function() {
-		var random = Math.floor(Math.random()*3);
+		let random = Math.floor(Math.random()*3);
 		ingredients.push(nonSweetIngredients[random]);
 		$('.sweet').hide();
 		$('.fruity').show();
@@ -77,7 +77,7 @@ $(document).ready(function() {
 	})
 
 	$('.fruityYes').click(function() {
-		var random = Math.floor(Math.random()*3);
+		let random = Math.floor(Math.random()*3);
 		ingredients.push(fruityIngredients[random]);
 		$('.fruity').hide();
 		$('.ingredients').append("<li>" +ingredients[4]+ "</li>");
@@ -85,7 +85,7 @@ $(document).ready(function() {
 	})
 
 	$('.fruityNo').click(function() {
-		var random = Math.floor(Math.random()*3);
+		let random = Math.floor(Math.random()*3);
 		ingredients.push(nonFruityIngredients[random]);
 		$('.fruity').hide();
 		$('.ingredients').append("<li>" +ingredients[4]+ "</li>");
